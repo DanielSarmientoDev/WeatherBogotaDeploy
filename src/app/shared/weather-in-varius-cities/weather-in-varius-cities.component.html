@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="list-cities">
+        <div class="list-header">
+            <ul >
+                <li>
+                    <div class="container-card-general">
+                        <div class="list-general">
+                            <div class="city-img">
+                                <img *ngIf="WeatherLyon?.weather[0].main == 'Mist'" src="https://www.flaticon.com/svg/static/icons/svg/2910/2910189.svg" slot="start" />
+                                <img *ngIf="WeatherLyon?.weather[0].main == 'Clouds'" src="https://www.flaticon.es/svg/static/icons/svg/166/166015.svg" slot="start" />
+                                <img *ngIf="WeatherLyon?.weather[0].main == 'Clear'" src="https://www.flaticon.es/svg/static/icons/svg/169/169367.svg" slot="start" />
+                                <img *ngIf="WeatherLyon?.weather[0].main == 'Snow'" src="https://www.flaticon.es/svg/static/icons/svg/2834/2834509.svg" slot="start" />
+                            </div>
+                            <div class="temperature-city">
+                                <h1>{{WeatherLyon?.main.temp | temperatureConverter : 'C'}} ͨ</h1>
+                            </div>
+                            <div class="name-city">
+                                <h2>{{WeatherLyon?.name}}</h2>
+                                <p>{{WeatherLyon?.sys.country}}</p>
+                            </div>
+                        </div>
+                                <div class="list-footer">
+                                    <p>Humidity: {{WeatherLyon?.main.humidity}}%</p>
+                                    <p>{{WeatherLyon?.weather[0].main}}</p>
+                                    <p>{{WeatherLyon?.wind.speed}}Km/h</p>
+                                </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="container-card-general">
+                        <div class="list-general">
+                        <div class="city-img">
+                                <img *ngIf="WeahterParis?.weather[0].main == 'Mist'" src="https://www.flaticon.com/svg/static/icons/svg/2910/2910189.svg" slot="start" />
+                                <img *ngIf="WeahterParis?.weather[0].main == 'Rain'" src="https://www.flaticon.es/svg/static/icons/svg/2834/2834509.svg" slot="start" />
+                                <img *ngIf="WeahterParis?.weather[0].main == 'Clouds'" src="https://www.flaticon.es/svg/static/icons/svg/166/166015.svg" slot="start" />
+                                <img *ngIf="WeahterParis?.weather[0].main == 'Clear'" src="https://www.flaticon.es/svg/static/icons/svg/169/169367.svg" slot="start" />
+                                <img *ngIf="WeahterParis?.weather[0].main == 'Snow'" src="https://www.flaticon.es/svg/static/icons/svg/2834/2834509.svg" slot="start" />
+                        </div>
+                        <div class="temperature-city">
+                            <h1>{{WeahterParis?.main.temp | temperatureConverter : 'C'}} ͨ</h1>
+                        </div>
+                        <div class="name-city">
+                            <h2>{{WeahterParis?.name}}</h2>
+                            <p>{{WeahterParis?.sys.country}}</p>
+                        </div>
+                    </div>
+                            <div class="list-footer">
+                                <p>Humidity: {{WeahterParis?.main.humidity}}%</p>
+                                <p>{{WeahterParis?.weather[0].main}}</p>
+                                <p>{{WeahterParis?.wind.speed}}Km/h</p>
+                            </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="add-locations">
+        <h1>Add locations</h1>
+        <img src="https://image.freepik.com/vector-gratis/composicion-isometrica-edificios-ciudad_1284-26159.jpg" alt="">
+    </div>
+</div>
