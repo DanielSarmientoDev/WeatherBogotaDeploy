@@ -1,6 +1,8 @@
 <div class="container-widget-left">
     <div class="container-general">
         <div class="container-img">
+        
+        <img *ngIf="weatherModel?.weather[0].main == 'Drizzle'" src="https://www.flaticon.com/svg/static/icons/svg/1809/1809557.svg" slot="start" />
             <img *ngIf="weatherModel?.weather[0].main == 'Haze'" src="https://www.flaticon.com/svg/static/icons/svg/1197/1197102.svg" slot="start" />
             <img *ngIf="weatherModel?.weather[0].main == 'Clouds'" src="https://www.flaticon.es/svg/static/icons/svg/166/166015.svg" slot="start" />
             <img *ngIf="weatherModel?.weather[0].main == 'Clear'" src="https://www.flaticon.es/svg/static/icons/svg/169/169367.svg" slot="start" />
@@ -8,7 +10,7 @@
             <h2>{{weatherModel?.weather[0].main}}</h2>
         </div>
         <div class="container-number">
-                <h1>{{weatherModel?.main.temp | temperatureConverter : 'C'}} ͨ</h1>
+                <h1>{{weatherModel?.main.temp | temperatureConverter : 'C'}}</h1>
         </div>
     </div>
 </div>

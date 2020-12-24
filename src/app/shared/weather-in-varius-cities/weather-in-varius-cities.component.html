@@ -12,7 +12,7 @@
                                 <img *ngIf="WeatherLyon?.weather[0].main == 'Snow'" src="https://www.flaticon.es/svg/static/icons/svg/2834/2834509.svg" slot="start" />
                             </div>
                             <div class="temperature-city">
-                                <h1>{{WeatherLyon?.main.temp | temperatureConverter : 'C'}} ͨ</h1>
+                                <h1>{{WeatherLyon?.main.temp | temperatureConverter : 'C'}}</h1>
                             </div>
                             <div class="name-city">
                                 <h2>{{WeatherLyon?.name}}</h2>
@@ -37,7 +37,7 @@
                                 <img *ngIf="WeahterParis?.weather[0].main == 'Snow'" src="https://www.flaticon.es/svg/static/icons/svg/2834/2834509.svg" slot="start" />
                         </div>
                         <div class="temperature-city">
-                            <h1>{{WeahterParis?.main.temp | temperatureConverter : 'C'}} ͨ</h1>
+                            <h1>{{WeahterParis?.main.temp | temperatureConverter : 'C'}}</h1>
                         </div>
                         <div class="name-city">
                             <h2>{{WeahterParis?.name}}</h2>
